@@ -1,0 +1,30 @@
+nexus_data:
+  data_choice_type: 'manual_split'
+  data_reader_type: 'read_csv'
+  data_reader_args:
+    train:
+      file: '../tests/dummy_data/train.csv'
+    dev:
+      file: '../tests/dummy_data/dev.csv'
+    test:
+      file: '../tests/dummy_data/test.csv'
+  data_preprocesser_func_list_and_args:
+    - process: 'nexus_basic_preprocesser'
+      params:
+        init:
+          operation:
+            - 'lowercase'
+  data_representer_func_list_and_args:
+    - process: 'nexus_tf_idf_representer'
+
+nexus_train:
+  models:
+    - model: 'nexus_boomer_logistic_regression'
+    - model: 'nexus_boomer_linear_svc'
+  callbacks:
+    - callback: 'model_saver_callback'
+      params:
+        output_dir: 'output'
+    - callback: 'benchmark_reporter_callback'
+      params:
+        output_dir: 'output'
