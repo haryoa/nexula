@@ -1,4 +1,4 @@
-from nexus.nexus_inventory.inventory_feature_representer import NexusTfIdfSklearnRepresenterData
+from nexula.nexula_inventory.inventory_feature_representer import NexusTfIdfSklearnRepresenterData
 
 
 def test_tf_idf():

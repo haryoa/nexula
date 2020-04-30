@@ -1,4 +1,4 @@
-from nexus.nexus_inventory.inventory_data_preprocesser import NexusBasicPreprocesserData
+from nexula.nexula_inventory.inventory_data_preprocesser import NexusBasicPreprocesserData
 
 
 def test_tf_idf():

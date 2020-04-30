@@ -1,13 +1,13 @@
 import json
 
-from nexus.nexus_data.data_controller import DataController
-from nexus.nexus_inventory.inventory_callback.callback_general import ModelSaverCallback, BenchmarkReporterCallback
-from nexus.nexus_inventory.inventory_data_preprocesser import NexusBasicPreprocesserData
-from nexus.nexus_inventory.inventory_feature_representer import NexusTfIdfSklearnRepresenterData
-from nexus.nexus_inventory.inventory_model.model_boomer import BoomerRandomForest
+from nexula.nexula_data.data_controller import DataController
+from nexula.nexula_inventory.inventory_callback.callback_general import ModelSaverCallback, BenchmarkReporterCallback
+from nexula.nexula_inventory.inventory_data_preprocesser import NexusBasicPreprocesserData
+from nexula.nexula_inventory.inventory_feature_representer import NexusTfIdfSklearnRepresenterData
+from nexula.nexula_inventory.inventory_model.model_boomer import BoomerRandomForest
 import os
-import nexus
-from nexus.nexus_train.train_controller import TrainerController
+import nexula
+from nexula.nexula_train.train_controller import TrainerController
 
 
 def test_model_saver_callback():

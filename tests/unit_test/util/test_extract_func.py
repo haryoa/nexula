@@ -1,5 +1,5 @@
-from nexus.nexus_utility.utility_extract_func import NexusFunctionModuleExtractor
-from nexus.nexus_inventory.inventory_feature_representer import NexusTfIdfSklearnRepresenterData
+from nexula.nexula_utility.utility_extract_func import NexusFunctionModuleExtractor
+from nexula.nexula_inventory.inventory_feature_representer import NexusTfIdfSklearnRepresenterData
 import scipy
 
 

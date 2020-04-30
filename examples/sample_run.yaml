@@ -19,7 +19,7 @@ nexula_train:
   callbacks:
     - callback: 'model_saver_callback'
       params:
-        output_dir: 'output/integration_test/'
+        output_dir: 'output/model/'
     - callback: 'benchmark_reporter_callback'
       params:
-        output_dir: 'output/integration_test/'
+        output_dir: 'output/'

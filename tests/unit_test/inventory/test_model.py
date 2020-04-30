@@ -1,4 +1,4 @@
-from nexus.nexus_inventory.inventory_model.model_boomer import BoomerLogisticRegression, BoomerLinearSVC, BoomerGaussianProcess, BoomerRandomForest, BoomerAdaBoost, BoomerMultinomialNB, BoomerQuadraticDiscriminant
+from nexula.nexula_inventory.inventory_model.model_boomer import BoomerLogisticRegression, BoomerLinearSVC, BoomerGaussianProcess, BoomerRandomForest, BoomerAdaBoost, BoomerMultinomialNB, BoomerQuadraticDiscriminant
 import pytest
 
 

@@ -2,7 +2,11 @@
 output/
 .pytest_cache
 .ipynb_checkpoints
-
+.vscode
+notebooks/
+sample_yaml/
+data/
+custom_nexus/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,4 +1,4 @@
-from nexus.nexus_controller.nexus_core import NexusController
+from nexula.nexula_controller.controller import NexusController
 import os
 import json
 

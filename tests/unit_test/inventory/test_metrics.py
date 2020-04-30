@@ -1,4 +1,4 @@
-from nexus.nexus_inventory.inventory_metrics import nexus_accuracy_score, nexus_f1_score_macro, nexus_f1_score_micro
+from nexula.nexula_inventory.inventory_metrics import nexus_accuracy_score, nexus_f1_score_macro, nexus_f1_score_micro
 import pytest
 
 
