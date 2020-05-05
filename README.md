@@ -94,7 +94,7 @@ All of them are coded in this repository.
 * nexus_millenial_lstm_classification
 
 ## Run CLI
-* Run yaml as the process controller. Below is the yaml example. See README.md in examples 
+* Run yaml as the process controller. Below is the yaml example. See Command Explanation.md in examples 
 folder on how to read the yaml.
 ```yaml
 nexula_data:
