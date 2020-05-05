@@ -9,7 +9,7 @@ Expect a lot of bugs in the source code :).
 pip install nexula
 ```
 The installation above will not install deep learning packages.
-If you want to use Deep Learning, install `pytorch` and `torchtext` manually.
+If you want to use Deep Learning, install `pytorch` ,  `torchtext`, and `pytorch-lightning` manually.
 
 ## Overview
 This library want to overcome the needs on searching the code of several 
