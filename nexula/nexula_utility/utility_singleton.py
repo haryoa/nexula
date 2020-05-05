@@ -48,6 +48,8 @@ class CustomNexusTranslatorSingleton():
 
     @staticmethod
     def extract_classes(extracted_name_module: str):
+        import sys
+        sys.path.append('.')
         translation_instance = {}
         current_module = importlib.import_module(extracted_name_module)
         for attribute in dir(current_module):

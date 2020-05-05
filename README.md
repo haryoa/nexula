@@ -8,6 +8,8 @@ Expect a lot of bugs in the source code :).
 ```
 pip install nexula
 ```
+The installation above will not install deep learning packages.
+If you want to use Deep Learning, install `pytorch` and `torchtext` manually.
 
 ## Overview
 This library want to overcome the needs on searching the code of several 
@@ -24,13 +26,7 @@ the library is easy to use.
 For now, this library is far from that dream, but we will achieve it. 
 
 # Quickstart
-Download sample_run.yaml in the examples folder. Then run:
-```bash
-python -m nexus -r sample_run.yaml
-```
-
-See your `output` folder to see the result.
-
+See `examples` folder. There will be a README.md that should guide you.
 
 # CLI Command
 ```bash
@@ -199,3 +195,5 @@ nexula_data:
     * Inference runtime
     * Training runtime
 * They are also extendable!
+
+# End

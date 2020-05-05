@@ -23,7 +23,7 @@ class ModelSaverCallback(NexusBaseCallbackInventory):
     def __init__(self, output_dir, *args, **kwargs):
         self.output_dir = Path(output_dir)
         if not self.output_dir.is_dir():
-            os.mkdir(output_dir)
+            os.makedirs(output_dir)
 
     def before_loop_step(self, trainer_object):
         pass
@@ -60,7 +60,7 @@ class ModelSaverCallback(NexusBaseCallbackInventory):
         output_dir = self.output_dir / model_name
         logger.debug("Saved at {}".format(output_dir))
         if not output_dir.is_dir():
-            os.mkdir(output_dir)
+            os.makedirs(output_dir)
         if current_model.type == 'boomer':
             filename = 'finalized_model.sav'
             logger.info("Output the model to {}".format(str(output_dir/filename)))

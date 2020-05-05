@@ -1,4 +1,6 @@
-torch
-joblib
-scikit-learn
-colorlog
+joblib==0.14.1
+scikit-learn==0.22.2.post1
+colorlog==4.1.0
+nltk==3.5
+pyyaml==5.3.1
+pandas==1.0.1

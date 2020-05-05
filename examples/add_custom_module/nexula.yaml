@@ -3,14 +3,18 @@ nexula_data:
   data_reader_type: 'read_csv'
   data_reader_args:
     train:
-      file: 'tests/dummy_data/train.csv'
+      file: 'data/train.csv'
     dev:
-      file: 'tests/dummy_data/dev.csv'
+      file: 'data/dev.csv'
     test:
-      file: 'tests/dummy_data/test.csv'
+      file: 'data/test.csv'
   data_pipeline:
     boomer:
       data_representer_func_list_and_args:
+        - process: 'shape_printer'
+          params:
+            init:
+              add_text: 'hello world! '
         - process: 'nexus_tf_idf_representer'
 
 nexula_train:

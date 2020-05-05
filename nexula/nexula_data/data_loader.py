@@ -1,8 +1,7 @@
 import logging
 
-from torchtext.data.iterator import Iterator
-
 from nexula.nexula_utility.utility_extract_func import NexusFunctionModuleExtractor
+from typing import Iterator
 
 logger = logging.getLogger('nexula')
 
@@ -92,7 +91,7 @@ class NexusMillenialDataLoader(BaseNexusDataLoader):
     def __getitem__(self, index):
         pass
 
-    def get_all_processed_data(self, fit_to_data=True) -> Iterator:
+    def get_all_processed_data(self, fit_to_data=True) -> Iterator[any]:
         # Data Preprocessing (args)
         self._x_data, self._y_data = self.nexus_data_reader_func()
         self._x_data, self._y_data = self.nexus_data_preprocesser(self._x_data, self._y_data,

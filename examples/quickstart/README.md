@@ -1,0 +1,37 @@
+# Quickstart
+
+Change directory to this folder and run:
+```bash
+nexula -r nexula.yaml
+```
+
+The yaml file contains:
+```yaml
+nexula_data:
+  data_choice_type: 'manual_split'
+  data_reader_type: 'read_csv'
+  data_reader_args:
+    train:
+      file: 'data/train.csv'
+    dev:
+      file: 'data/dev.csv'
+    test:
+      file: 'data/test.csv'
+  data_pipeline:
+    boomer:
+      data_representer_func_list_and_args:
+        - process: 'nexus_tf_idf_representer'
+
+nexula_train:
+  models:
+    - model: 'nexus_boomer_logistic_regression'
+  callbacks:
+    - callback: 'model_saver_callback'
+      params:
+        output_dir: 'output/model/'
+    - callback: 'benchmark_reporter_callback'
+      params:
+        output_dir: 'output/'
+```
+This command yaml will preprocess text into tf-idf and do logistic regression algorithm.  
+The result will be in  `output/` folder

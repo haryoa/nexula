@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 from nltk import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
-from torchtext.data import Field, BucketIterator, Iterator
 
 from nexula.nexula_inventory.inventory_base import NexusBaseDataInventory
 from nexula.nexula_inventory.inventory_translator import NEXUS_INVENTORY_DATA_READER as nexus_inv_data_reader
@@ -96,6 +95,7 @@ class NexusMillenialTorchTextRepresenter(NexusBaseDataInventory):
             torch.Long if multiclass
             torch.float if binary
         """
+        from torchtext.data import Field
         import torch
         dtype = torch.float if binary else torch.long
         self.logger.info("Tokenizing data with {}".format(tokenizer_name))
@@ -169,6 +169,7 @@ class NexusMillenialTorchTextRepresenter(NexusBaseDataInventory):
         self.text_field.build_vocab(x, max_size=self.vocab_size, min_freq=self.min_freq)
 
     def __call__(self, x, y, fit_to_data=False, shuffle=True, *args, **kwargs):
+        from torchtext.data import BucketIterator, Iterator
         # REFACTOR THIS
         from ..nexula_inventory.representer_torchtext.torchtext_helper import DataFrameDataset
 
