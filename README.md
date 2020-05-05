@@ -30,6 +30,14 @@ See `examples` folder. There will be a README.md that should guide you.
 
 # CLI Command
 ```bash
+python -m nexula [Args]
+```
+Or
+```bash
+nexula [Args]
+```
+The args are as follow:
+```bash
   -h, --help            show this help message and exit
   -r RUN_YAML, --run-yaml RUN_YAML
                         Yaml file as a command of the nexula
